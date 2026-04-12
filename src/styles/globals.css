@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-secondary font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-accent font-bold;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-2 rounded transition-all hover:bg-opacity-90;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}

@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "teams": "Teams",
+    "contact": "Contact",
+    "search": "Search..."
+  },
+  "hero": {
+    "title": "HH Consulting Architects and Engineering PLC",
+    "tagline": "Innovative Design, Sustainable Future.",
+    "cta": "Explore Our Work"
+  },
+  "about": {
+    "title": "About Us",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values"
+  },
+  "services": {
+    "title": "Our Services"
+  },
+  "projects": {
+    "title": "Featured Projects"
+  },
+  "teams": {
+    "title": "Meet Our Team"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again."
+  },
+  "search": {
+    "title": "Search Results",
+    "no_results": "No results found for",
+    "placeholder": "Type to search..."
+  }
+}
