@@ -1,6 +1,10 @@
 :root {
   --primary: rgb(160, 193, 114);
-  --secondary: rgb(123, 116, 107);
+  --primary-dark: rgb(130, 160, 90);
+  --primary-light: rgba(160, 193, 114, 0.15);
+  --secondary: rgb(45, 42, 38);
   --background: rgb(255, 255, 255);
   --accent: rgb(63, 27, 27);
+  --accent-light: rgb(83, 47, 47);
+  --surface: rgb(248, 249, 250);
 }

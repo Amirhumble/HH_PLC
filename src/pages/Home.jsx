@@ -2,7 +2,9 @@ import React from 'react';
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
 import ServicesSection from '../components/sections/ServicesSection';
-import ProjectsSection from '../components/sections/ProjectsSection';
+import FeaturedProjects from '../components/sections/FeaturedProjects';
+import PotentialClientsSection from '../components/sections/PotentialClientsSection';
+import GallerySection from '../components/sections/GallerySection';
 import ContactSection from '../components/sections/ContactSection';
 
 const Home = () => {
@@ -10,8 +12,10 @@ const Home = () => {
     <div>
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
+      <ServicesSection showcase={true} />
+      <FeaturedProjects />
+      <PotentialClientsSection />
+      <GallerySection />
       <ContactSection />
     </div>
   );
