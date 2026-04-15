@@ -1,8 +1,8 @@
+@import './variables.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './variables.css';
 
 html {
   scroll-behavior: smooth;
@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-accent font-bold;
+  @apply font-bold;
 }
 
 .btn-primary {
@@ -22,4 +22,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-padding {
   @apply py-16 md:py-24;
+}
+
+@keyframes potentialClientsMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.potential-clients-marquee {
+  overflow: hidden;
+}
+
+.potential-clients-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: potentialClientsMarquee 42s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .potential-clients-track {
+    gap: 1.5rem;
+  }
 }

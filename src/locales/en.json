@@ -1,4 +1,10 @@
 {
+  "brand": {
+    "shortName": "HH Consulting"
+  },
+  "language": {
+    "ariaLabel": "Select language"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",
@@ -10,23 +16,69 @@
   },
   "hero": {
     "title": "HH Consulting Architects and Engineering PLC",
-    "tagline": "Innovative Design, Sustainable Future.",
-    "cta": "Explore Our Work"
+    "tagline": "Worldwide Consulting. Engineered Excellence.",
+    "cta": "Explore Our Work",
+    "partner": "For any international projects, we are your dedicated global partner in design and construction supervision."
   },
   "about": {
     "title": "About Us",
+    "description": "HH Consulting Architects and Engineers plc is a multidisciplinary firm based in Ethiopia, dedicated to providing innovative, sustainable, and integrated solutions in architecture and engineering. We combine visionary design with technical excellence to deliver impactful and resilient projects across Ethiopia and beyond.",
     "mission": "Our Mission",
+    "mission_text": "Driven by a passion for automated project management solutions with architectural and civil engineering services. Implements innovative ideas across multiple services and lines of business to contribute towards promoting efficient and economical project management and quality control solutions.",
     "vision": "Our Vision",
-    "values": "Our Values"
+    "vision_text": "We strive to achieve innovative project management and quality control solutions for the local construction industry. We implement proper contract administration and design supervision methods by creating partnership and creative working environment.",
+    "values": "Our Values",
+    "values_list": [
+      "Appropriate usage of time",
+      "Developing the behavioral qualities of a good entrepreneurship",
+      "Serving customers in kind"
+    ],
+    "approach": "Our Approach",
+    "approach_text": "We are committed to excellence, sustainability, and innovation. Our designs balance aesthetics, function, and environmental responsibility. We work closely with clients, stakeholders, and communities to ensure every project meets technical, regulatory, and social expectations."
   },
   "services": {
-    "title": "Our Services"
+    "title": "Our Services",
+    "expertise": "Our Expertise",
+    "expertise_categories": [
+      {
+        "title": "Architectural and Engineering Design",
+        "items": ["Architectural Design", "Structural Engineering", "Electrical and Mechanical Systems Design", "Sanitary and Plumbing Systems"]
+      },
+      {
+        "title": "Infrastructure & Civil Engineering",
+        "items": ["Road and Highway Design", "Bridge and Transportation Structures", "Irrigation and Water Resource Engineering", "Infrastructure Master Planning"]
+      },
+      {
+        "title": "Urban & Environmental Service",
+        "items": ["Urban and Regional Master Plans", "Environmental Impact Assessments (EIA)", "Landscape Architecture and Design", "Topographic Surveys"]
+      },
+      {
+        "title": "Feasibility & Planning",
+        "items": ["Feasibility Studies for Public and Private Projects", "Strategic Planning and Site Analysis", "Concept Development and Cost Estimations"]
+      },
+      {
+        "title": "Construction Supervision & Project Management",
+        "items": ["Contract Administration", "Quality Control and Assurance", "Site Supervision", "Project Scheduling and Monitoring"]
+      }
+    ]
   },
   "projects": {
     "title": "Featured Projects"
   },
   "teams": {
-    "title": "Meet Our Team"
+    "title": "Meet Our Team",
+    "badge": "OUR TEAM",
+    "description": "A multidisciplinary team focused on design quality, reliable delivery, and practical engineering outcomes."
+  },
+  "footer": {
+    "description": "Innovative design and engineering consultancy delivering quality, sustainability, and dependable project execution.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "emails": "Emails",
+    "phoneNumbers": "Phone Numbers",
+    "rightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   },
   "contact": {
     "title": "Contact Us",
@@ -41,6 +93,15 @@
   "search": {
     "title": "Search Results",
     "no_results": "No results found for",
-    "placeholder": "Type to search..."
+    "placeholder": "Type to search...",
+    "empty_query": "Enter a keyword to search services, projects, and team members.",
+    "start_typing": "Start typing in the search bar to find what you need.",
+    "results_count_one": "{{count}} result found",
+    "results_count_other": "{{count}} results found",
+    "types": {
+      "service": "Service",
+      "project": "Project",
+      "team": "Team Member"
+    }
   }
 }
