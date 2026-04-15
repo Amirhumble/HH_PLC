@@ -32,14 +32,15 @@ const GallerySection = () => {
   const t = (en, am) => (i18n.language === 'en' ? en : am);
 
   return (
-    <section className="section-padding bg-white" id="gallery">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section className="py-16 md:py-24 bg-white" id="gallery">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-block text-primary font-bold uppercase tracking-widest text-xs mb-2">Our Visual Journey</span>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
             {t('Our Gallery', 'የፎቶ ማህደር')}
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
             {t(
               'Glimpses of our team in action, site visits, and corporate events.',
               'የቡድናችን የስራ እንቅስቃሴ፣ የሳይት ጉብኝቶች እና የድርጅታዊ ዝግጅቶች እይታዎች።'
@@ -47,14 +48,14 @@ const GallerySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {images.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.05 }}
               className="group relative cursor-pointer overflow-hidden rounded-2xl aspect-square shadow-md hover:shadow-xl transition-all duration-500"
               onClick={() => setSelectedImage(image)}
             >
@@ -62,13 +63,14 @@ const GallerySection = () => {
                 src={image.src}
                 alt={t(image.title.en, image.title.am)}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-bold text-sm">
+              <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-6">
+                <div className="bg-white/10 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white font-bold text-xs md:text-sm">
                     {t(image.title.en, image.title.am)}
                   </p>
-                  <div className="mt-2 text-primary">
+                  <div className="mt-2 text-primary text-sm">
                     <FontAwesomeIcon icon={faExpandAlt} />
                   </div>
                 </div>
@@ -85,11 +87,11 @@ const GallerySection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/95 p-4 md:p-10"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/98 p-2 sm:p-4 md:p-10"
             onClick={() => setSelectedImage(null)}
           >
             <motion.button
-              className="absolute top-6 right-6 text-white text-3xl hover:text-primary transition-colors z-[60]"
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white text-2xl sm:text-3xl hover:text-primary transition-colors z-[110] bg-white/10 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-md"
               onClick={() => setSelectedImage(null)}
             >
               <FontAwesomeIcon icon={faTimes} />
@@ -99,16 +101,16 @@ const GallerySection = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative max-w-5xl w-full h-full flex flex-col items-center justify-center"
+              className="relative max-w-full max-h-full flex flex-col items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={selectedImage.src}
                 alt={t(selectedImage.title.en, selectedImage.title.am)}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                className="max-w-[95vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
               />
-              <div className="mt-6 text-center">
-                <h3 className="text-white text-xl md:text-2xl font-bold">
+              <div className="mt-4 md:mt-6 px-4 text-center">
+                <h3 className="text-white text-lg md:text-2xl font-bold max-w-2xl">
                   {t(selectedImage.title.en, selectedImage.title.am)}
                 </h3>
               </div>

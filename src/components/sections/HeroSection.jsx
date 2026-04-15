@@ -26,7 +26,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden bg-gray-900">
+    <section className="relative h-[85vh] md:h-screen flex items-center justify-center text-white overflow-hidden bg-gray-900">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -43,19 +43,20 @@ const HeroSection = () => {
               style={{ backgroundImage: `url(${images[currentIndex]})` }}
             />
             {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 md:from-black/60 md:via-black/40 md:to-black/60"></div>
           </motion.div>
         </AnimatePresence>
       </div>
 
-      <div className="container mx-auto px-4 z-10 text-center">
+      <div className="container mx-auto px-6 z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-4xl mx-auto"
         >
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg leading-tight"
           >
             {t('hero.title')}
           </motion.h1>
@@ -63,7 +64,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-xl md:text-2xl lg:text-3xl mb-6 text-white drop-shadow-md font-medium"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6 text-primary drop-shadow-md font-bold uppercase tracking-wide"
           >
             {t('hero.tagline')}
           </motion.p>
@@ -71,7 +72,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto italic mb-10 drop-shadow-md"
+            className="text-base md:text-xl text-gray-200 max-w-2xl mx-auto italic mb-8 md:mb-10 drop-shadow-md px-4"
           >
             {t('hero.partner')}
           </motion.p>
@@ -82,7 +83,7 @@ const HeroSection = () => {
           >
             <Link
               to="/projects"
-              className="bg-primary hover:bg-primary-dark text-white px-10 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-xl inline-block border-2 border-white/20 backdrop-blur-sm"
+              className="bg-primary hover:bg-primary-dark text-white px-8 py-3.5 md:px-10 md:py-4 rounded-full text-base md:text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-xl inline-block border-2 border-white/20 backdrop-blur-sm"
             >
               {t('hero.cta')}
             </Link>

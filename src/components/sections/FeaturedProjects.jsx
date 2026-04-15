@@ -59,20 +59,23 @@ const FeaturedProjects = () => {
   const project = featuredProjects[currentIndex];
 
   return (
-    <section className="section-padding bg-gray-900 overflow-hidden" id="featured-projects">
-      <div className="container mx-auto px-4 mb-10">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-4">
+    <section className="py-16 md:py-24 bg-gray-900 overflow-hidden" id="featured-projects">
+      <div className="container mx-auto px-6 mb-8 md:mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <div className="text-white">
-            <h2 className="text-2xl md:text-4xl font-bold">
+            <span className="inline-block text-primary font-bold uppercase tracking-widest text-xs mb-2">Our Masterpieces</span>
+            <h2 className="text-3xl md:text-5xl font-bold">
               {i18n.language === 'en' ? 'Featured Projects' : 'የተመረጡ ስራዎች'}
             </h2>
-            <div className="w-16 h-1 bg-primary mt-3"></div>
+            <div className="w-16 h-1 bg-primary mt-4"></div>
           </div>
           <Link 
             to="/projects" 
-            className="text-primary font-bold hover:text-white transition-colors flex items-center gap-2 group text-sm md:text-base"
+            className="inline-flex items-center gap-2 bg-white/10 hover:bg-primary text-white px-6 py-3 rounded-xl transition-all duration-300 group border border-white/10"
           >
-            {i18n.language === 'en' ? 'Explore All Projects' : 'ሁሉንም ፕሮጀክቶች ያስሱ'}
+            <span className="font-bold text-sm">
+              {i18n.language === 'en' ? 'Explore All Projects' : 'ሁሉንም ፕሮጀክቶች ያስሱ'}
+            </span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -81,7 +84,7 @@ const FeaturedProjects = () => {
       </div>
 
       <div 
-        className="relative h-[350px] md:h-[450px] w-full max-w-6xl mx-auto px-4"
+        className="relative h-[450px] sm:h-[500px] md:h-[600px] w-full max-w-7xl mx-auto px-4"
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}
       >
@@ -109,43 +112,43 @@ const FeaturedProjects = () => {
                 paginate(-1);
               }
             }}
-            className="absolute inset-0 px-4"
+            className="absolute inset-0 px-4 cursor-grab active:cursor-grabbing"
           >
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl group/slide">
+            <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl group/slide">
               <img 
                 src={project.image} 
                 alt={project.title_en}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover/slide:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent flex flex-col justify-center p-6 md:p-12">
+              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/90 via-black/40 to-transparent flex flex-col justify-end md:justify-center p-8 md:p-16">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="max-w-xl"
+                  className="max-w-2xl"
                 >
-                  <span className="inline-block bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
+                  <span className="inline-block bg-primary text-white px-4 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-4 shadow-lg shadow-primary/20">
                     {i18n.language === 'en' ? project.category : project.category_am}
                   </span>
-                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                  <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
                     {i18n.language === 'en' ? project.title_en : project.title_am}
                   </h3>
-                  <p className="text-white text-sm md:text-base mb-6 line-clamp-2 leading-relaxed opacity-95">
+                  <p className="text-gray-200 text-sm md:text-lg mb-8 line-clamp-3 leading-relaxed opacity-95">
                     {i18n.language === 'en' ? project.description_en : project.description_am}
                   </p>
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                     <Link 
                       to="/projects" 
-                      className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-bold text-sm transition-all shadow-lg transform hover:-translate-y-0.5"
+                      className="w-full sm:w-auto text-center bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-base transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-0.5"
                     >
                       {i18n.language === 'en' ? 'View Details' : 'ዝርዝር ይመልከቱ'}
                     </Link>
-                    <div className="hidden sm:flex items-center gap-2 text-white/70 text-sm">
+                    <div className="flex items-center gap-3 text-white/80 text-sm md:text-base bg-white/5 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      <span>{project.location}</span>
+                      <span className="font-medium">{project.location}</span>
                     </div>
                   </div>
                 </motion.div>
@@ -154,30 +157,30 @@ const FeaturedProjects = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Navigation Arrows */}
-        <div className="absolute inset-y-0 left-6 z-10 hidden md:flex items-center">
+        {/* Navigation Arrows - Hidden on small mobile */}
+        <div className="absolute inset-y-0 left-8 z-10 hidden lg:flex items-center">
           <button 
             onClick={() => paginate(-1)}
-            className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-primary hover:border-primary transition-all flex items-center justify-center group"
+            className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-primary hover:border-primary transition-all flex items-center justify-center group shadow-xl"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
         </div>
-        <div className="absolute inset-y-0 right-6 z-10 hidden md:flex items-center">
+        <div className="absolute inset-y-0 right-8 z-10 hidden lg:flex items-center">
           <button 
             onClick={() => paginate(1)}
-            className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-primary hover:border-primary transition-all flex items-center justify-center group"
+            className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-primary hover:border-primary transition-all flex items-center justify-center group shadow-xl"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
 
         {/* Indicators */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex gap-2.5 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
           {featuredProjects.map((_, index) => (
             <button
               key={index}
@@ -185,8 +188,8 @@ const FeaturedProjects = () => {
                 setDirection(index > currentIndex ? 1 : -1);
                 setCurrentIndex(index);
               }}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'w-8 bg-primary' : 'w-1.5 bg-white/30 hover:bg-white/50'
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'w-8 bg-primary shadow-[0_0_10px_rgba(160,193,114,0.5)]' : 'w-2 bg-white/40 hover:bg-white/60'
               }`}
             />
           ))}
