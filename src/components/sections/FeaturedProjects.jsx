@@ -180,7 +180,7 @@ const FeaturedProjects = () => {
         </div>
 
         {/* Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex gap-2.5 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-10 flex gap-2.5 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
           {featuredProjects.map((_, index) => (
             <button
               key={index}

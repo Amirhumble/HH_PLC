@@ -40,9 +40,9 @@ const Header = () => {
             <span className="font-bold text-accent group-hover:text-primary transition-colors duration-300 text-sm md:text-lg leading-tight">
               {t('brand.shortName')}
             </span>
-            <span className="text-[10px] text-gray-500 hidden sm:block md:hidden lg:block">
+            {/* <span className="text-[10px] text-gray-500 hidden sm:block md:hidden lg:block">
               {t('brand.tagline')}
-            </span>
+            </span> */}
           </div>
         </Link>
 
