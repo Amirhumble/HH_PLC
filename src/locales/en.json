@@ -22,19 +22,41 @@
   },
   "about": {
     "title": "About Us",
+    "hero_title": "Our Story",
+    "heading": "Engineering a Better Future Through Innovation",
     "description": "HH Consulting Architects and Engineers plc is a multidisciplinary firm based in Ethiopia, dedicated to providing innovative, sustainable, and integrated solutions in architecture and engineering. We combine visionary design with technical excellence to deliver impactful and resilient projects across Ethiopia and beyond.",
     "mission": "Our Mission",
     "mission_text": "Driven by a passion for automated project management solutions with architectural and civil engineering services. Implements innovative ideas across multiple services and lines of business to contribute towards promoting efficient and economical project management and quality control solutions.",
     "vision": "Our Vision",
     "vision_text": "We strive to achieve innovative project management and quality control solutions for the local construction industry. We implement proper contract administration and design supervision methods by creating partnership and creative working environment.",
-    "values": "Our Values",
+    "values": "Our Core Values",
+    "values_intro": "The principles that guide our decisions, our designs, and our relationships with every client.",
     "values_list": [
-      "Appropriate usage of time",
-      "Developing the behavioral qualities of a good entrepreneurship",
-      "Serving customers in kind"
+      {
+        "title": "Innovation",
+        "desc": "We embrace cutting-edge technology and creative thinking to solve complex engineering challenges."
+      },
+      {
+        "title": "Integrity",
+        "desc": "Transparency and ethical practices are the bedrock of every partnership we build."
+      },
+      {
+        "title": "Sustainability",
+        "desc": "Our designs prioritize environmental responsibility and long-term resilience."
+      },
+      {
+        "title": "Collaboration",
+        "desc": "We work as a seamless extension of our clients teams to ensure shared success."
+      }
     ],
-    "approach": "Our Approach",
-    "approach_text": "We are committed to excellence, sustainability, and innovation. Our designs balance aesthetics, function, and environmental responsibility. We work closely with clients, stakeholders, and communities to ensure every project meets technical, regulatory, and social expectations."
+    "philosophy_title": "Our Philosophy",
+    "philosophy_text": "\"Architecture should speak of its time and place, but yearn for timelessness.\"",
+    "commitment_title": "Our Commitment to Excellence",
+    "commitment_quote": "We combine visionary design with technical excellence to deliver impactful and resilient projects across Ethiopia and beyond.",
+    "commitment_text": "HH Consulting Architects and Engineers PLC remains dedicated to providing innovative, sustainable, and integrated solutions that stand the test of time.",
+    "cta_title": "Ready to Start Your Project?",
+    "cta_text": "Let's collaborate to bring your vision to life with world-class engineering and architectural expertise.",
+    "cta_button": "Get in Touch"
   },
   "services": {
     "title": "Our Services",
@@ -42,23 +64,47 @@
     "expertise_categories": [
       {
         "title": "Architectural and Engineering Design",
-        "items": ["Architectural Design", "Structural Engineering", "Electrical and Mechanical Systems Design", "Sanitary and Plumbing Systems"]
+        "items": [
+          "Architectural Design",
+          "Structural Engineering",
+          "Electrical and Mechanical Systems Design",
+          "Sanitary and Plumbing Systems"
+        ]
       },
       {
         "title": "Infrastructure & Civil Engineering",
-        "items": ["Road and Highway Design", "Bridge and Transportation Structures", "Irrigation and Water Resource Engineering", "Infrastructure Master Planning"]
+        "items": [
+          "Road and Highway Design",
+          "Bridge and Transportation Structures",
+          "Irrigation and Water Resource Engineering",
+          "Infrastructure Master Planning"
+        ]
       },
       {
         "title": "Urban & Environmental Service",
-        "items": ["Urban and Regional Master Plans", "Environmental Impact Assessments (EIA)", "Landscape Architecture and Design", "Topographic Surveys"]
+        "items": [
+          "Urban and Regional Master Plans",
+          "Environmental Impact Assessments (EIA)",
+          "Landscape Architecture and Design",
+          "Topographic Surveys"
+        ]
       },
       {
         "title": "Feasibility & Planning",
-        "items": ["Feasibility Studies for Public and Private Projects", "Strategic Planning and Site Analysis", "Concept Development and Cost Estimations"]
+        "items": [
+          "Feasibility Studies for Public and Private Projects",
+          "Strategic Planning and Site Analysis",
+          "Concept Development and Cost Estimations"
+        ]
       },
       {
         "title": "Construction Supervision & Project Management",
-        "items": ["Contract Administration", "Quality Control and Assurance", "Site Supervision", "Project Scheduling and Monitoring"]
+        "items": [
+          "Contract Administration",
+          "Quality Control and Assurance",
+          "Site Supervision",
+          "Project Scheduling and Monitoring"
+        ]
       }
     ]
   },
