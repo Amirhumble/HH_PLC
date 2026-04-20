@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from '../../utils/constants';
+import { getOptimizedImage } from '../../utils/imageUtils';
 import { Link } from 'react-router-dom';
 
 const FeaturedProjects = () => {
@@ -116,7 +117,7 @@ const FeaturedProjects = () => {
           >
             <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl group/slide">
               <img 
-                src={project.image} 
+                src={getOptimizedImage(project.image, 1200)} 
                 alt={project.title_en}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover/slide:scale-105"
               />

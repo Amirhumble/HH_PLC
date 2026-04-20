@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { TEAM_MEMBERS } from '../../utils/constants';
+import { getOptimizedImage } from '../../utils/imageUtils';
 
 const TeamsSection = () => {
   const { t, i18n } = useTranslation();
@@ -41,7 +42,7 @@ const TeamsSection = () => {
                   }`}
                 >
                   <img
-                    src={member.photo}
+                    src={getOptimizedImage(member.photo, member.cardVariant === 'wide' ? 600 : 400)}
                     alt={member.name}
                     loading="lazy"
                     className={`h-full w-full transition-transform duration-700 group-hover:scale-110 ${
