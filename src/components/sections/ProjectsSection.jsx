@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from '../../utils/constants';
+import { getOptimizedImage } from '../../utils/imageUtils';
 
 const ProjectsSection = () => {
   const { t, i18n } = useTranslation();
@@ -65,7 +66,7 @@ const ProjectsSection = () => {
                 {/* Image */}
                 <div className="absolute inset-0 overflow-hidden">
                   <img 
-                    src={project.image} 
+                    src={getOptimizedImage(project.image, 800)} 
                     alt={project.title_en}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
@@ -134,7 +135,7 @@ const ProjectsSection = () => {
                   <div className="h-64 sm:h-80 md:h-[400px] lg:h-full relative bg-gray-100 flex flex-col border-b lg:border-b-0 lg:border-r border-gray-100">
                     <div className="flex-grow relative overflow-hidden">
                       <img
-                        src={selectedProject.images ? selectedProject.images[0] : selectedProject.image}
+                        src={getOptimizedImage(selectedProject.images ? selectedProject.images[0] : selectedProject.image, 1200)}
                         alt={selectedProject.title_en}
                         className="w-full h-full object-cover"
                       />
@@ -150,7 +151,7 @@ const ProjectsSection = () => {
                               if (mainImg) mainImg.src = img;
                             }}
                           >
-                            <img src={img} alt="" className="w-full h-full object-cover" />
+                            <img src={getOptimizedImage(img, 200)} alt="" className="w-full h-full object-cover" />
                           </div>
                         ))}
                       </div>
